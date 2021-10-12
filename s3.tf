@@ -1,11 +1,11 @@
 ### Create Bucket
 
 resource "aws_s3_bucket" "b" {
-  bucket = "Rapha-Ribeiro-bucket"
+  bucket = "rapha-ribeiro-bucket"
   acl    = "private"
 
   tags = {
-    Name        = "Rapha-Ribeiro-bucket"
+    Name        = "rapha-ribeiro-bucket"
     
   }
 }
