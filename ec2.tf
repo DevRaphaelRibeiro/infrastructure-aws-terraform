@@ -6,9 +6,11 @@ resource "aws_instance" "ec2-db" {
   instance_type = "t2.micro"
 
   ### VPC
+  subnet_id = aws_subnet.prod-subnet-private-1.id
+  availability_zone = var.AWS_REGION_AZ_DB
   ### Atribuir Security Group
-  ### Chave pública utilizada
-  ### Script para deploy de servidor web 
+  vpc_security_group_ids  = [aws_security_group.dbservers.id]
+  
 
 }
 
@@ -26,9 +28,6 @@ resource "aws_instance" "ec2-web01" {
   vpc_security_group_ids = [aws_security_group.webservers.id]
 
 
-  ### Chave pública utilizada
-  ### Script para deploy de servidor web 
-
 }
 
 
@@ -44,8 +43,7 @@ resource "aws_instance" "ec2-web02" {
   ### Atribuir Security Group
   vpc_security_group_ids = [aws_security_group.webservers.id]
 
-  ### Chave pública utilizada
-  ### Script para deploy de servidor web 
+  
 
 }
 
@@ -60,7 +58,6 @@ resource "aws_instance" "ec2-web03" {
   ### Atribuir Security Group
   vpc_security_group_ids = [aws_security_group.webservers.id]
 
-  ### Chave pública utilizada
-  ### Script para deploy de servidor web 
+  
 
 }
