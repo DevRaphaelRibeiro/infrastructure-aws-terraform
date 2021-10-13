@@ -3,7 +3,7 @@
 Em Produção.....
 
 Bom pessoal,
-Este é um simples exemplo de uma infra estrutura criada na aws com terraform, ainda estou configurando alguns serviços.
+Este é um simples exemplo de uma infra estrutura criada na aws com terraform, ainda irei adcionar alguns serviços.
 
 O que é deployado por código no aws-terraform
 
